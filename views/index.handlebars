@@ -2,20 +2,24 @@
 
 <h2>Burger Menu</h2>
 
-<ul>
+<ul class="list-group">
     {{#each burger}}
-    {{#unless devoured}}
-    {{> burger/burger-block devoured=true}}
+    {{#unless this.devoured}}
+    <li class="list-group-item">
+        <div class="input-group">
+            <p class="lead">{{this.burger_name}}</p>
+        </div>
+    </li>
     {{/unless}}
     {{/each}}
 </ul>
 
 <h2>Devoured Burgers</h2>
 
-<ul>
+<ul class="list-group">
     {{#each burger}}
-    {{#if devoured}}
-    {{> burger/burger-block devoured=false}}
+    {{#if this.devoured}}
+    {{this.burger_name}}
     {{/if}}
     {{/each}}
 </ul>
@@ -25,7 +29,7 @@
 
     <div class="form-group">
         <label for="burger_name">Burger Name:</label>
-        <input type="text" id="ca" name="name">
+        <input type="text" id="burger_name" name="burger">
     </div>
 
     <div class="form-group">
