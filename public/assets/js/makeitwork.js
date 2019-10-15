@@ -1,5 +1,3 @@
-Handlebars.registerPartial("burger", $("#burger-partial").html());
-
 $(function() {
     $(".change-devoured").on("click", function(event) {
         var id = $(this).data("id");
@@ -26,8 +24,8 @@ $(function() {
         event.preventDefault();
 
         var newBurger_Name = {
-            burger_name: $("#burger_name").val().trim(),
-            devoured: $("[burger_name=devoured]:checked").val().trim()
+            burger_name: $("#burger_name").val(),
+            devoured: $("[burger_name=devoured]:checked").val()
         };
 
         // Send the POST request
