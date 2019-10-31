@@ -10,10 +10,12 @@
                     <ul class="list-group">
                         {{#each burger}}
                         {{#unless this.devoured}}
-                        <li class="list-group-item">
-                            <div class="input-group">
-                                <p class="lead">{{this.burger_name}}</p>
-                            </div>
+                        <li>
+                            {{burger_name}}
+
+                            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+                                {{#if devoured}}Gimme More!{{else}}Eat Me!{{/if}}
+                            </button>
                         </li>
                         {{/unless}}
                         {{/each}}
@@ -22,16 +24,26 @@
             </div>
         </div>
         <div class="col s12 m6 l6">
-            <h4>Devoured Burgers</h4>
-            <ul class="list-group">
-                {{#each burger}}
-                {{#if this.devoured}}
-                <li class="list-group-item">
-                    <p class="lead">{{this.burger_name}}</p>
-                </li>
-                {{/if}}
-                {{/each}}
-            </ul>
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">
+                        <h4>Devoured Burgers</h4>
+                    </span>
+                    <ul class="list-group">
+                        {{#each burger}}
+                        {{#if this.devoured}}
+                        <li>
+                            {{burger_name}}
+
+                            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+                                {{#if devoured}}Gimme More!{{else}}Eat Me!{{/if}}
+                            </button>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
