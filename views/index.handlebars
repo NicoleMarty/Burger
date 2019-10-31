@@ -13,10 +13,12 @@
                         <li>
                             {{burger_name}}
 
-                            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+                            <button class="change-devoured waves-effect waves-light btn-small right" data-id="{{id}}"
+                                data-newDevoured="{{devoured}}">
                                 {{#if devoured}}Gimme More!{{else}}Eat Me!{{/if}}
                             </button>
                         </li>
+                        <br>
                         {{/unless}}
                         {{/each}}
                     </ul>
@@ -35,10 +37,12 @@
                         <li>
                             {{burger_name}}
 
-                            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+                            <button class="change-devoured waves-effect waves-light btn-small right" data-id="{{id}}"
+                                data-newDevoured="{{devoured}}">
                                 {{#if devoured}}Gimme More!{{else}}Eat Me!{{/if}}
                             </button>
                         </li>
+                        <br>
                         {{/if}}
                         {{/each}}
                     </ul>
@@ -54,20 +58,10 @@
                 <div class="form-group">
                     <label for="burger_name">Burger Name:</label>
                     <input type="text" id="burger_name" name="burger">
-                    <button id="new_burger" type="submit">Add New Burger Name</button>
+                    <button class="btn waves-effect waves-light" id="new_burger" type="submit">Add New Burger
+                        Name</button>
                 </div>
             </form>
-        </div>
-        <div class="col s12 m6 l6">
-            <h5>Devour a Burger!</h5>
-            <form id="devour_burger" class="create-form">
-                <div class="form-group">
-                    <label for="devoured">Burger to Devour:</label>
-                    <input type="text" id="burger_name" name="burger">
-                    <button class="change-devoured" type="submit">Devour it!</button>
-                </div>
-            </form>
-            <br>
         </div>
     </div>
 </div>
